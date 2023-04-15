@@ -1,0 +1,181 @@
+/*reset CSS afin de réinitialiser les données dans les différents navigateurs*/
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+/****General****/
+
+:root {
+    --color-primary: #9356DC;
+    --color-secondary: #FF79DA;
+    --color-tertiary: #99E2D0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    max-width: 769px;
+    box-sizing: border-box;
+}
+
+h1
+{
+    font-family: 'Shrikhand', cursive;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;    
+    background-color: white;
+}
+
+h2
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    
+}
+
+h3
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+h4
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/***Header***/
+
+header {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid red;
+    background-color: #F6F6F6;     
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    background-color: #EAEAEA;
+    height: 40px;
+}
+
+.fa-location-dot {
+    padding-top: 11px;
+}
+
+.placeholder {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #EAEAEA;
+    border: none;   
+}
+
+::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;    
+}
+
+header h2 {    
+    align-self: center;
+    text-align: center;
+    line-height: 25px;
+    width: 250px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+header p {
+    align-self: center;
+    text-align: center;
+    width: 350px;
+    height: 45px;
+}
+
+span {
+   display: flex;     
+   align-items: center; /*permet de centrer le texte dans la hauteur*/
+   width:200px;
+   margin-top: 20px;
+   margin-bottom: 40px;
+}
+
+.explorer {
+   /* border: 2px solid var(--color-secondary);*/
+    align-self: center; /*permet de centrer le bloc dans le header*/
+    justify-content: center; /*permet de centrer le texte dans la largeur dans le bouton*/
+    background: linear-gradient(var(--color-secondary), var(--color-primary));
+    border-radius: 20px;
+    height: 35px;
+}
+
+/***NAV***/
+
+nav {
+    border: 2px solid red;
+}
+
+nav h2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+.choix {   
+    display: flex;
+    color:black;
+    width: 300px;
+    height: 70px;
+    align-items: center; /*centre en hauteur*/
+    background-color:  #F6F6F6;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px 0 #F6F6F6;
+    margin-bottom: 15px;
+    margin-left: 25px;
+}
+
+.ordre {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    color: white;
+    background-color: var(--color-primary);
+    font-size: 10px;
+    padding-top: 4px;
+    text-align: center;
+    margin-left: -10px;
+    margin-right: 15px;
+}
+
+.fa-list-ul, .fa-mobile-screen-button, .fa-store {
+   margin-right: 20px;
+}

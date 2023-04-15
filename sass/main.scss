@@ -1,0 +1,23 @@
+/*reset CSS afin de réinitialiser les données dans les différents navigateurs*/
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+@import "./utils/variables";
+@import "./utils/fonctions";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+
+@import "./vendors"; /*Feuilles de style de tiers*/
+
+@import "./Base/font";
+
+@import "./Composants/button";
+
+@import "./Layout/header";
+@import "./Layout/form";
+@import "./Layout/nav";
+@import "./Layout/main-contener";
+@import "./Layout/footer";
+
+@import "./Pages/accueil";
+@import "./Pages/restaurants";
+

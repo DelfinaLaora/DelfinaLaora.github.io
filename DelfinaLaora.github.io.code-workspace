@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": 
+{
+	"name": "ohmyfood",
+	"version": "1.0.0",
+	"description": "Création du site Ohmyfood Paris",
+	"main": "index.js",
+	"scripts": {
+	  "sass": "sass --watch ./sass/main.scss:./css/style.css"
+	},
+	"repository": {
+	  "type": "git",
+	  "url": "git+https://github.com/DelfinaLaora/DelfinaLaora.github.io.git"
+	  
+	},
+	"author": "Delfina Laora",
+	"license": "",
+	"bugs": {
+	  "url": 
+	},
+	"homepage": "https://github.com/DelfinaLaora/DelfinaLaora.github.io.git"
+  }
+}
