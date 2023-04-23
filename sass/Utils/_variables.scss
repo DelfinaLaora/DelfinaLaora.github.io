@@ -1,0 +1,93 @@
+:root {
+    --color-primary: #9356DC;
+    --color-secondary: #FF79DA;
+    --color-tertiary: #99E2D0;
+    --color-quaternary: #008766;
+    --color-quinquennial: rgba(255, 255, 255, 0.15);
+}
+
+$color-position:#EAEAEA;
+$color-nav:#F6F6F6;
+$color-nav-icone:#7E7E7E;
+$color-footer:#353535;
+
+/*@include */
+
+@mixin color-gradient {
+    background: /*linear-gradient(var(--color-secondary), var(--color-primary));*/
+    linear-gradient(193.33deg, (var(--color-primary)) -11.44%, (var(--color-secondary)) 123.93%);
+    }
+
+@mixin color-gradient-light {
+    background: linear-gradient(0deg, (var(--color-quinquennial)), (var(--color-quinquennial))), linear-gradient(200.64deg, (var(--color-primary)) -5.2%, (var(--color-secondary)) 110.74%);
+    /*background: linear-gradient.scale(var(--color-secondary, 20%), var(--color-primary, 20%));*/
+    }
+
+@mixin box-shadow1 {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    }
+
+@mixin box-shadow2 {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+    }    
+
+@mixin box-shadow3 {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    }    
+
+@mixin box-shadow4 {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+
+@mixin heart-start {
+    line-height: 35px;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-fill-color:transparent;
+    }
+
+@mixin heart-end {
+    background: -moz-linear-gradient(var(--color-secondary), var(--color-primary));; 
+    background: -webkit-linear-gradient(var(--color-secondary), var(--color-primary));; 
+    background: linear-gradient(var(--color-secondary), var(--color-primary));
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+    -webkit-text-stroke: 0px;
+    }
+
+    /*@extend %heart-start*/
+
+%heart-end {
+    background: -moz-linear-gradient(var(--color-secondary), var(--color-primary));; 
+    background: -webkit-linear-gradient(var(--color-secondary), var(--color-primary));; 
+    background: linear-gradient(var(--color-secondary), var(--color-primary));
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+    -webkit-text-stroke: 0px;
+    }
+    
+%heart-start {
+    line-height: 35px;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-fill-color:transparent;
+    }
+
+$shake-intensityX: 1%;
+$shake-intensityY: 5%;
+@keyframes headshake {
+    25% {
+        // entièrement à gauche
+        transform: translateX($shake-intensityX);
+        
+        }
+    75% {
+        // entièrement en haut
+        transform: translateY($shake-intensityY);
+        }
+    }

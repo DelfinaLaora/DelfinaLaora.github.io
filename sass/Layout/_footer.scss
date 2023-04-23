@@ -1,0 +1,26 @@
+footer {
+    background-color: $color-footer;
+    color: white;  
+    padding-left: 15px;}
+
+    .titre-footer {
+        text-align: left;
+        font-size: 18px;    
+        background-color: $color-footer; 
+    }
+
+    footer li {
+        line-height: 24px;    
+    }
+
+    footer a {
+        color: white;
+    }
+    
+    footer i {
+        display: flex;
+        width: 20px;
+        font-size: 11px;
+    
+    }
+

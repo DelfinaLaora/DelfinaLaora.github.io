@@ -1,0 +1,107 @@
+/*formulaire du header pour chercher sa ville*/
+form {
+    display: flex;
+    justify-content: center;
+    background-color: $color-position;
+    height: 40px;
+    box-shadow: inset 0 0.1em 2px rgba(0, 0, 0, 0.15);
+
+    .fa-location-dot {
+        padding-top: 11px;
+    }
+
+    .placeholder {
+        width: 120px;
+        height: 30px; 
+        align-self: center;
+        margin-left: 10px;
+        background-color: $color-position;
+        border: none;     
+    }
+
+    ::placeholder {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        color: black;        
+    }
+}   
+
+
+/*formulaire du header pour explorer les restaurants*/
+
+span {   
+    display: flex;    
+    width:200px; 
+    height: 50px;
+    align-items: center; /*permet de centrer le texte dans la hauteur  */
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+    
+.explorer {   
+    font-size: 16px;
+    align-self: center; /*permet de centrer le bloc dans le header*/
+    justify-content: center; /*permet de centrer le texte dans la largeur dans le bouton*/
+    @include color-gradient;
+    border-radius: 25px; 
+    @include box-shadow1;   
+        &:hover {
+            @include color-gradient-light;
+            @include box-shadow2;    
+        }
+        
+        a {
+            color: white;           
+                &:hover {
+                    animation: headshake 400ms cubic-bezier(.4,.1,.6,.9) both;
+                }
+        }
+    }
+
+
+/*formulaire du nav pour le fonctionnement*/
+.choix {   
+    display: flex;    
+    width: 300px;
+    height: 70px;
+    color:black;
+    align-items: center; /*centre en hauteur*/
+    background-color: $color-nav;
+    border-radius: 20px;
+    @include box-shadow1;
+    margin-bottom: 15px;
+    margin-left: 25px;
+    &:hover {
+        @include box-shadow2;
+    }
+}
+
+.ordre {
+    width: 20px;
+    height: 20px;   
+    text-align: center;
+    font-size: 10px; 
+    color: white;
+    border-radius: 100%;
+    background-color: var(--color-primary);    
+    padding-top: 4px;    
+    margin-left: -10px;
+    margin-right: 15px;
+}
+
+
+/*Les boutons coeur favoris*/
+
+
+    main .fa  {
+    line-height: 35px;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-fill-color:transparent;
+    line-height: 35px;
+    @include heart-start;
+        &:hover {
+            @include heart-end;
+            }
+    }
