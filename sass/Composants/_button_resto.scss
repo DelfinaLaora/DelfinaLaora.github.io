@@ -1,0 +1,101 @@
+.card-plat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /*centre en hauteur*/ 
+  width: 95%; /*95%*/
+  height: 69px;
+  overflow: hidden;
+  border-style: none;
+  border-radius: 15px;
+  background-color: white; 
+  padding-left: 5px;
+  padding-right: 15px;
+  cursor: pointer;
+  
+  @include box-shadow5;
+
+  animation: plat ease-out 500ms 150ms;
+  @for $i from 1 through $num-plat {
+      &--#{$i} {
+      animation-delay: $anim-delay * $i; 
+      }
+  }   
+  
+  &:hover > .tarif {
+    transform: translate(-40%, 0);
+  }
+
+  &:hover > .plat {
+        width: 200px;
+  }
+
+  @include tablet {
+    &:hover > .plat {
+      width: 300px;
+      }
+  }
+}
+
+.plat {
+  display: flex;
+  flex-direction: column;
+  width: 100%;/*100%*/
+  margin-left: 5px;
+  margin-right: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;/*- pour opera*/  
+  text-overflow: ellipsis;
+   
+  h3, p {
+    text-align: left;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;/*- pour opera*/  
+    text-overflow: ellipsis;  
+  }
+}
+
+.tarif {
+  display: flex;
+  align-items: flex-end;/*pour que le prix soit en bas*/
+  justify-content: flex-end;/* pour que le prix soit à droite*/
+  background: transparent;
+  width: 150px; 
+  height: 100%;
+  padding-bottom: 10px;
+  margin-right: -77px;   
+  transition: transform 250ms ease-in-out;
+  transform-origin: right;
+  transform: translate(0);   
+  
+  p {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  
+  .icone-tarif {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 75px;
+    padding-right: 10px;
+    margin-bottom: -17px;
+    margin-left: 15px;/*15*/
+    background-color: (var(--color-tertiary));      
+
+  .fa-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border: 2px solid (var(--color-tertiary));
+    border-radius: 100%;
+    color: (var(--color-tertiary));
+    background: white;
+    }
+  }
+}

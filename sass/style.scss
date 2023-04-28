@@ -6,9 +6,15 @@
 @import "./Base/font";
 
 @import "./Composants/button";
+@import "./Composants/button_resto";
+@import "./Composants/animation_resto";
 
 @import "./Layout/general";
-@import "./Layout/header";
-@import "./Layout/nav";
-@import "./Layout/main-contener";
+@import "./Layout/header-accueil";
+@import "./Layout/nav-accueil";
+@import "./Layout/card-accueil";
 @import "./Layout/footer";
+@import "./Layout/resto";
+
+
+

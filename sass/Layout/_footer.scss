@@ -1,26 +1,90 @@
 footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     background-color: $color-footer;
-    color: white;  
-    padding-left: 15px;}
+    color: white; 
+    padding-left: 15px;
+border: 2px solid rgb(106, 217, 245);
+    @include tablet {
+        
+        height: 114px;        
+        flex-direction: row-reverse; /*dans le sens inverse*/
+        align-items: flex-end;/*placer en bas du contener*/
+        padding-bottom: 20px;  
+    }
+  /* @include desktop {
+        width: 100%;  
+        height: 114px;
+    }*/
 
-    .titre-footer {
-        text-align: left;
-        font-size: 18px;    
-        background-color: $color-footer; 
+    ul { 
+        display: flex; 
+        flex-direction: column;       
+        white-space: nowrap;
+       
+        @include tablet { 
+            flex-direction: row;              
+        }
+        /*@include desktop {    
+            width: 50%;                            
+        }*/
     }
 
-    footer li {
-        line-height: 24px;    
+    li {
+        line-height: 24px;       
+        
+        @include tablet {              
+            margin-right: 15px;
+            } 
+       /* @include desktop {              
+            margin-right: 15px;
+            }   */
+        }
+
+    li:nth-child(2n){
+        @include tablet { 
+            margin-right: 50px;
+        }
+        /*@include desktop { 
+            margin-right: 50px;
+        }*/
     }
 
-    footer a {
+    a {
         color: white;
     }
-    
-    footer i {
+
+    i {
         display: flex;
         width: 20px;
         font-size: 11px;
-    
     }
+}
+
+.titre-footer {       
+        text-align: left;
+        font-size: 18px;    
+        background-color: $color-footer;  
+        @include tablet {            
+            margin-right: 25px;
+        } 
+         
+}
+
+.liste {
+    display: flex;
+    @include tablet {
+    justify-content:flex-end;
+    margin-left: 15px;
+    }
+}
+
+   
+
+
+
+   
+
+    
 
