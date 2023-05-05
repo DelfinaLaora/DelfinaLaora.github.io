@@ -12,7 +12,6 @@ nav {
 
     @include desktop {
         width:82%;
-        /*align-self: center;*/
         padding-left:10px;
 
         h3 {   
@@ -23,44 +22,43 @@ nav {
     h1 {
         align-self: flex-start;
         margin: 15px 0 15px 10px;
+
         @include tablet {
           margin-left: 0px;
         }
     }    
-}
 
-.article-fonctionnement {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    
-    @include tablet {
+    .article-fonctionnement {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        width: 100%;
-
-        article {            
-        margin-right: 50px;
-        }
-    }
-
-    @include desktop {        
-        justify-content: space-between;
-        flex-wrap: nowrap;
+        flex-direction: column;
+        width: 90%;
         
-        article {            
-            margin-right: 0px;
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+
+            article {   
+                margin-right: 25px;       
+                margin-left: 25px;              
+            }
+        }
+
+        @include desktop {        
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            
+            article {            
+                margin-right: 0px;
+            }
+        }    
+
+        article .fa-solid {
+            margin-right: 15px;
+            color: $color-nav-icone;  
         }
     }
+
 }
-
-article .fa-solid {
-   margin-right: 15px;
-   color: $color-nav-icone;
-
-  
-}
-
-

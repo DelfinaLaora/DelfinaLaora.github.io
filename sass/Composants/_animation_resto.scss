@@ -1,22 +1,45 @@
-
-
 @keyframes plat {
     0% {
-        transform: translate(200px, -200px);
+        transform: translate(-200px, -200px);
         opacity: 0;
     }
-    50% {
+    30% {
         transform: translate(150px, 150px);
+        opacity: 0.4;
     }
-   60% {
-        transform: translate(50px, 50px);
+    60% {
+        transform: translate(100px, 50px);
+        opacity: 0.4;
     }
     
     100% {
         transform: translate(0, 0px);
+        opacity: 1;
     }
 }
 
+@keyframes plat-reverse {
+    0% {
+        transform: translate(200px, 200px);
+        opacity: 0;
+    }
+    30% {
+        transform: translate(-150px, -150px);
+        opacity: 0.4;
+    }
+    60% {
+        transform: translate(-50px, -50px);
+        opacity: 0.8;
+    }
+    
+    100% {
+        transform: translate(0, 0px);
+        opacity: 1;
+    }
+}
+
+
+/*
 @keyframes check {
     0% {
         transform: translate(-100px);
@@ -24,58 +47,5 @@
         
     100% {
         transform: translate(0px);
-    }
-}
-/*0% {
-    transform: translate(200px, -200px);
-    opacity: 0.5;
-}
-20% {
-    transform: translate(50px, 100px);
-}
-
-100% {
-    transform: translate(0, 0px);
-}
-
-/*0% {
-    transform: translate(-500px, -400px);
-}
-20% {
-    transform: translateX(500px, -300px);
-}
-40% {
-    transform: translateX(200px, -300px);
-}
-60% {
-    transform: translateX(100px, 300px);
-}
-80% {
-    transform: translateX(50px, 400px);
-}
-
-100% {
-    transform: translate(0, 0px);
-}
-
-/*@keyframes plat {
-    0% {
-        transform: translate(520px, -400px);
-    }
-   20% {
-        transform: translateX(100px, -300px);
-    }
-    40% {
-        transform: translateX(200px, 200px);
-    }
-   60% {
-        transform: translateX(100px, 100px);
-    }
-    80% {
-        transform: translateX(50px, 50px);
-    }
-    
-    100% {
-        transform: translate(0, 0px);
     }
 }*/

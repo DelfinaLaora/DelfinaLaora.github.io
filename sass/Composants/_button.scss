@@ -1,24 +1,20 @@
 /*formulaire du header pour chercher sa ville*/
+
 form {
     display: flex;
     justify-content: center;
-    background-color: $color-position;
     height: 40px;
+    background-color: $color-position;    
     box-shadow: inset 0 0.1em 2px rgba(0, 0, 0, 0.15);
 
     .fa-location-dot {
         padding-top: 11px;
 
         @include tablet {
-            margin-right: 5px;
             font-size: 13px;
             padding-top: 14px;
+            margin-right: 5px;            
         }
-       /* @include desktop {
-            margin-right: 5px;
-            font-size: 13px;
-            padding-top: 14px;
-        }*/
     }
 
     .placeholder {
@@ -39,57 +35,51 @@ form {
 
 
 /*formulaire du header pour explorer les restaurants*/
-
-.explorer {   
-    display: flex;    
-    width:180px; 
-    height: 40px;
-    font-size: 10px;
-    align-items: center; /*permet de centrer le texte dans la hauteur  */
-    margin-top: 20px;
-    margin-bottom: 30px;
-
-    @include tablet {
-        margin-top: 0; 
-    }    
-}
     
 .explorer {   
+    display: flex;
+    align-items: center;
     align-self: center; /*permet de centrer le bloc dans le header*/
     justify-content: center; /*permet de centrer le texte dans la largeur dans le bouton*/
-    @include color-gradient;
-    border-radius: 25px; 
+    width:180px;
+    height: 40px;
+    border-radius: 25px;
+    font-size: 10px;    
+    margin-top: 20px;
+    margin-bottom: 30px; 
+    @include color-gradient;    
     @include box-shadow1;
     @include box-shadow5;   
+
         &:hover {
             @include color-gradient-light;
             @include box-shadow2;
             @include box-shadow6; 
-           /* transform: matrix(1, 0, 0, -1, 0, 0);  */ 
+        }
+
+        @include tablet {
+            margin-top: 0; 
         }
         
         a {
             color: white;
             font-size: 13px; 
             letter-spacing: 0.6px;  
-                  
-               /* &:hover {
-                    animation: headshake 400ms cubic-bezier(.4,.1,.6,.9) both;
-                }*/
         }
     }
 
 
 /*formulaire du nav pour le fonctionnement*/
+
 .choix {   
     display: flex;    
+    align-items: center; /*centre en hauteur*/
     width: 100%;
     height: 60px;
-    color:black;
-    align-items: center; /*centre en hauteur*/
-    background-color: $color-nav;
-    border-radius: 20px;
     white-space: nowrap;
+    color:black;
+    background-color: $color-nav;
+    border-radius: 20px;    
     margin-bottom: 15px;
     @include box-shadow5;
 
@@ -105,167 +95,48 @@ form {
         width: 100%;
         margin-right: 20px;
     }
-}
 
-.ordre {
-    width: 20px;
-    height: 20px;   
-    text-align: center;
-    font-size: 10px; 
-    color: white;
-    border-radius: 100%;
-    background-color: var(--color-secondary);    
-    padding-top: 4px;    
-    margin-left: -10px;
-    margin-right: 15px;  
-    
-   @include tablet {
+    .ordre {
+        width: 20px;
+        height: 20px;   
+        text-align: center;
+        font-size: 10px; 
+        color: white;    
+        background-color: var(--color-secondary);    
+        border-radius: 100%;
         padding-top: 4px;  
+        margin-right: 15px;    
+        margin-left: -10px;    
+        
+       @include tablet {
+            padding-top: 4px;  
+        }
     }
-    
-    /*@include desktop {        
-        padding-top: 4px;        
-    }*/
 }
-
 
 /*Les boutons coeur favoris*/
 
-main .fa  {
-    line-height: 35px;
-    -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: black;
-    -webkit-text-fill-color:transparent;
-    position: relative;
-    /*height: 50px;
-    font-size: 20px;*/
-    line-height: 35px;
+/*main .fa  {   
     @include heart-start;
         &:hover {
             @include heart-end;
             }
-    }
+    }*/
 
-
-
-/*.heart {
-    border: 2px solid rgb(168, 124, 124);
-    
-
-    .fa  {
-        
-         -webkit-text-stroke: 1px;
-         -webkit-text-stroke-color: black;
-         -webkit-text-fill-color:transparent;
-         font-size: 15px;
-         position: relative;
-         z-index: 1;
-        
-        &:hover  {
-    
-            &::after + .fa {
-                height: 10px;
-                opacity: 1;
-            }
+   main .fa {     
+        font-size: 20px;
+        -webkit-text-stroke: 1px black;
+        -webkit-text-fill-color:transparent; 
+        background-clip: text;
+        -webkit-background-clip: text;          
+        background-image: linear-gradient(-65deg, #9356DC , #FF79DA , #ffffff26, white);
+        background-size: 500% 500%;
+        background-position: 0%;
+        margin-top: 5px;
+     
+        &:hover {
+        animation: heart 1s ease-in forwards; 
         }
-
-        &::after  {
-            content: "";
-            position: absolute;
-            height: 0px;
-             width: 15px;
-            top: 0;
-            right:0;            
-            bottom: 0;
-            left: 0;
-            @include heart-end;
-            opacity:0;
-            z-index: -1;
-            transition: all 0.3s linear 0s;
-     }
-    
     }
-}*/
-
-/*.heart {
-    border: 2px solid rgb(168, 124, 124);
-    
-
-    .fa {
-        /* line-height: 35px;*/
-      /*  @include heart-start;
-         
-         font-size: 15px;
-         position: relative;
-         z-index: 1;
-        
-        &:hover  {
-    
-            &::after  {
-                height: 10px;
-                opacity: 1;
-            }
-        }
-
-        &::after + .fa-solid  {
-            content: "";
-            position: absolute;
-            height: 0px;
-             width: 15px;
-            top: 0;
-            right:0;            
-            bottom: 0;
-            left: 0;
-            color: yellow;
-            opacity:0;
-            z-index: -1;
-            transition: all 0.3s linear 0s;
-     }
-    
-    }
-}*/
-
-
-   /* main .fa  {
-    line-height: 35px;
-    -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: black;
-    -webkit-text-fill-color:transparent;
-    font-size: 15px;
-    position: relative;
-    z-index: 0;
-    /*@include heart-start;*/
-
-   /* &:hover {
-           
-        &::after{
-            @include heart-end;
-            height: 100%;
-        }
-
-    }    
-        
-      /*  ::before {        
-            transition: all 0.3s linear 0s;
-            height: 20px;
-            @include heart-end;
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-        }    */
-
-        /*&:hover {
-            @include heart-end;
-            }*/
-    
-
-    /*.heart {
-        display: block;
-        position: relative;
-        @include heart-start;*/
-
-        
-    
-
-
+     
+     

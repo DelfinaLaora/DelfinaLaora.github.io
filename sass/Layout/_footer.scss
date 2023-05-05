@@ -2,21 +2,35 @@ footer {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: $color-footer;
-    color: white; 
+    color: white;
+    background-color: $color-footer;     
     padding-left: 15px;
-border: 2px solid rgb(106, 217, 245);
+    
     @include tablet {
-        
         height: 114px;        
         flex-direction: row-reverse; /*dans le sens inverse*/
         align-items: flex-end;/*placer en bas du contener*/
         padding-bottom: 20px;  
     }
-  /* @include desktop {
-        width: 100%;  
-        height: 114px;
-    }*/
+
+    .titre-footer {       
+        text-align: left;
+        font-size: 18px;    
+        background-color: $color-footer;  
+        
+        @include tablet {            
+            margin-right: 25px;
+        }          
+    }
+
+    .liste {
+        display: flex;
+        
+        @include tablet {
+        justify-content:flex-end;
+        margin-left: 15px;
+        }
+    }
 
     ul { 
         display: flex; 
@@ -26,9 +40,6 @@ border: 2px solid rgb(106, 217, 245);
         @include tablet { 
             flex-direction: row;              
         }
-        /*@include desktop {    
-            width: 50%;                            
-        }*/
     }
 
     li {
@@ -37,18 +48,12 @@ border: 2px solid rgb(106, 217, 245);
         @include tablet {              
             margin-right: 15px;
             } 
-       /* @include desktop {              
-            margin-right: 15px;
-            }   */
-        }
+    }
 
     li:nth-child(2n){
         @include tablet { 
             margin-right: 50px;
         }
-        /*@include desktop { 
-            margin-right: 50px;
-        }*/
     }
 
     a {
@@ -59,27 +64,8 @@ border: 2px solid rgb(106, 217, 245);
         display: flex;
         width: 20px;
         font-size: 11px;
-    }
+    }    
 }
-
-.titre-footer {       
-        text-align: left;
-        font-size: 18px;    
-        background-color: $color-footer;  
-        @include tablet {            
-            margin-right: 25px;
-        } 
-         
-}
-
-.liste {
-    display: flex;
-    @include tablet {
-    justify-content:flex-end;
-    margin-left: 15px;
-    }
-}
-
    
 
 

@@ -13,7 +13,7 @@ $color-footer:#353535;
 $color-resto: #F7F7F7;
 
 /*animation plat*/
-$anim-dur: 500ms;
+$anim-dur: 1s;
 $num-plat: 3;
 $anim-delay: $anim-dur / $num-plat;
 
@@ -76,20 +76,6 @@ $anim-delay: $anim-dur / $num-plat;
     }
 
 
-$shake-intensityX: 1%;
-$shake-intensityY: 5%;
-@keyframes headshake {
-    25% {
-        // entièrement à gauche
-        transform: translateX($shake-intensityX);
-        
-        }
-    75% {
-        // entièrement en haut
-        transform: translateY($shake-intensityY);
-        }
-    }
-
 $breakpoints: (desktop: 1025px,
                tablet: 769px);
 
@@ -104,3 +90,17 @@ $breakpoints: (desktop: 1025px,
         @content;
     }
 }
+
+@keyframes heart {
+    0%{ 
+      background-position: 0%;         
+    }       
+    50%{     
+      background-position :50%;
+      -webkit-text-stroke: 1px #9356DC;
+    }
+    100%{     
+      background-position :100%;
+      -webkit-text-stroke: 1px #9356DC;
+    }
+  }
