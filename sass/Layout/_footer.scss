@@ -3,8 +3,10 @@ footer {
     flex-direction: column;
     width: 100%;
     color: white;
-    background-color: $color-footer;     
-    padding-left: 15px;
+    background-color: $color-footer; 
+    padding-top: 12px;
+    padding-bottom: 20px;    
+    padding-left: 20px;
     
     @include tablet {
         height: 114px;        
@@ -16,7 +18,8 @@ footer {
     .titre-footer {       
         text-align: left;
         font-size: 18px;    
-        background-color: $color-footer;  
+        background-color: $color-footer; 
+        margin-top: 10px;
         
         @include tablet {            
             margin-right: 25px;
@@ -25,7 +28,8 @@ footer {
 
     .liste {
         display: flex;
-        
+        margin-top: 10px;
+
         @include tablet {
         justify-content:flex-end;
         margin-left: 15px;
@@ -43,7 +47,7 @@ footer {
     }
 
     li {
-        line-height: 24px;       
+        line-height: 26px;       
         
         @include tablet {              
             margin-right: 15px;

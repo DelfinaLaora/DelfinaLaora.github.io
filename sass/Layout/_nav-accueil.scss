@@ -4,25 +4,17 @@ nav {
     align-items: center;
     width:100%;
     box-sizing: border-box;
-      
+    padding-top: 15px;
+    padding-bottom: 15px;
     @include tablet {
         width:80%;
         align-self: center;        
     }
 
-    @include desktop {
-        width:82%;
-        padding-left:10px;
-
-        h3 {   
-            margin-right: 60px;
-        }        
-    }
-
-    h1 {
+    h2 {
         align-self: flex-start;
         margin: 15px 0 15px 10px;
-
+        
         @include tablet {
           margin-left: 0px;
         }
@@ -32,7 +24,7 @@ nav {
         display: flex;
         flex-direction: column;
         width: 90%;
-        
+               
         @include tablet {
             display: flex;
             flex-direction: row;
@@ -49,9 +41,9 @@ nav {
         @include desktop {        
             justify-content: space-between;
             flex-wrap: nowrap;
-            
             article {            
                 margin-right: 0px;
+                margin-left: 10px;
             }
         }    
 
