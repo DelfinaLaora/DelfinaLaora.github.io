@@ -12,6 +12,19 @@
 
 /*animation plat*/
 /*@include */
+@-webkit-keyframes heart {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 50%;
+    -webkit-text-stroke: 1px #9356DC;
+  }
+  100% {
+    background-position: 100%;
+    -webkit-text-stroke: 1px #9356DC;
+  }
+}
 @keyframes heart {
   0% {
     background-position: 0%;
@@ -53,6 +66,30 @@ form .placeholder {
   align-self: center;
   background-color: #EAEAEA;
   border: none;
+}
+form ::-webkit-input-placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+}
+form ::-moz-placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+}
+form :-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+}
+form ::-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
 }
 form ::placeholder {
   font-family: "Roboto", sans-serif;
@@ -159,6 +196,7 @@ main .fa {
   margin-top: 5px;
 }
 main .fa:hover {
+  -webkit-animation: heart 1s ease-in forwards;
   animation: heart 1s ease-in forwards;
 }
 
@@ -182,28 +220,36 @@ main .fa:hover {
 }
 
 .card-plat {
+  -webkit-animation: plat ease-out 1s 150ms both;
   animation: plat ease-out 1s 150ms both;
 }
 .card-plat--1 {
+  -webkit-animation-delay: 0.3333333333s;
   animation-delay: 0.3333333333s;
 }
 .card-plat--2 {
+  -webkit-animation-delay: 0.6666666667s;
   animation-delay: 0.6666666667s;
 }
 .card-plat--3 {
+  -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
 
 .card-plat-reverse {
+  -webkit-animation: plat-reverse ease-out 1s 150ms both;
   animation: plat-reverse ease-out 1s 150ms both;
 }
 .card-plat-reverse--1 {
+  -webkit-animation-delay: 0.3333333333s;
   animation-delay: 0.3333333333s;
 }
 .card-plat-reverse--2 {
+  -webkit-animation-delay: 0.6666666667s;
   animation-delay: 0.6666666667s;
 }
 .card-plat-reverse--3 {
+  -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
 
@@ -258,6 +304,24 @@ main .fa:hover {
   margin-right: 12px;
 }
 
+@-webkit-keyframes plat {
+  0% {
+    transform: translate(-200px, -200px);
+    opacity: 0;
+  }
+  30% {
+    transform: translate(150px, 150px);
+    opacity: 0.4;
+  }
+  60% {
+    transform: translate(100px, 50px);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(0, 0px);
+    opacity: 1;
+  }
+}
 @keyframes plat {
   0% {
     transform: translate(-200px, -200px);
@@ -270,6 +334,24 @@ main .fa:hover {
   60% {
     transform: translate(100px, 50px);
     opacity: 0.4;
+  }
+  100% {
+    transform: translate(0, 0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes plat-reverse {
+  0% {
+    transform: translate(200px, 200px);
+    opacity: 0;
+  }
+  30% {
+    transform: translate(-150px, -150px);
+    opacity: 0.4;
+  }
+  60% {
+    transform: translate(-50px, -50px);
+    opacity: 0.8;
   }
   100% {
     transform: translate(0, 0px);
@@ -761,6 +843,7 @@ footer i {
   background: black;
   visibility: hidden;
   z-index: 1;
+  -webkit-animation: loader 3s 1 linear;
   animation: loader 3s 1 linear;
 }
 .loader .gif {
@@ -785,14 +868,15 @@ footer i {
   height: 200px;
   margin-left: -200px;
   border-radius: 50%;
+  -webkit-animation: titre 3s 1 linear;
   animation: titre 3s 1 linear;
 }
 .loader .titre .titre1, .loader .titre .titre2, .loader .titre .titre3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   font-family: "Shrikhand", cursive;
   font-size: 18px;
   font-weight: 400;
@@ -800,22 +884,44 @@ footer i {
   color: white;
   background: radial-gradient(#FF79DA 50%, #9356DC 85%);
   border-radius: 50%;
+  padding-right: 5px;
 }
 .loader .titre .titre1 {
-  margin-top: -50px;
-  margin-right: 45px;
+  margin-top: -75px;
+  margin-right: 40px;
   margin-left: -70px;
 }
 .loader .titre .titre2 {
   align-self: flex-end;
-  margin-bottom: -20px;
+  margin-bottom: -30px;
 }
 .loader .titre .titre3 {
-  margin-top: -50px;
+  margin-top: -70px;
   margin-right: -70px;
   margin-left: 35px;
 }
 
+@-webkit-keyframes loader {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
 @keyframes loader {
   0% {
     opacity: 1;
@@ -837,7 +943,7 @@ footer i {
     opacity: 0.5;
   }
 }
-@keyframes titre {
+@-webkit-keyframes titre {
   0% {
     -webkit-transform: rotate(-360deg);
   }
@@ -852,5 +958,22 @@ footer i {
   }
   100% {
     -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes titre {
+  0% {
+    transform: rotate(-360deg);
+  }
+  30% {
+    transform: rotate(-180deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }/*# sourceMappingURL=style.css.map */

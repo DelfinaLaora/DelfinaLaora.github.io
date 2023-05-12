@@ -23,11 +23,14 @@
 
 .card-plat {
 
-  animation: plat ease-out 1s 150ms both;
+  -webkit-animation: plat ease-out 1s 150ms both;
+
+          animation: plat ease-out 1s 150ms both;
 
   @for $i from 1 through $num-plat {
       &--#{$i} {
-      animation-delay: $anim-delay * $i;      
+      -webkit-animation-delay: $anim-delay * $i;
+              animation-delay: $anim-delay * $i;      
       }
   }     
 
@@ -35,11 +38,14 @@
 
 .card-plat-reverse {
 
-  animation: plat-reverse ease-out 1s 150ms both;
+  -webkit-animation: plat-reverse ease-out 1s 150ms both;
+
+          animation: plat-reverse ease-out 1s 150ms both;
 
   @for $i from 1 through $num-plat {
       &--#{$i} {
-      animation-delay: $anim-delay * $i;      
+      -webkit-animation-delay: $anim-delay * $i;
+              animation-delay: $anim-delay * $i;      
       }
   }     
 }

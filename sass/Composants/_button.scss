@@ -26,6 +26,34 @@ form {
         border: none;     
     }
 
+    ::-webkit-input-placeholder {
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        color: black;        
+    }
+
+    ::-moz-placeholder {
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        color: black;        
+    }
+
+    :-ms-input-placeholder {
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        color: black;        
+    }
+
+    ::-ms-input-placeholder {
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        color: black;        
+    }
+
     ::placeholder {
         font-family: 'Roboto', sans-serif;
         font-size: 15px;
@@ -136,7 +164,8 @@ form {
         margin-top: 5px;
      
         &:hover {
-        animation: heart 1s ease-in forwards; 
+        -webkit-animation: heart 1s ease-in forwards;
+                animation: heart 1s ease-in forwards; 
         }
     }
      

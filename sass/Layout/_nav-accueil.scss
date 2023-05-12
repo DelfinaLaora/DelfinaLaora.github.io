@@ -6,6 +6,7 @@ nav {
     box-sizing: border-box;
     padding-top: 15px;
     padding-bottom: 15px;
+    
     @include tablet {
         width:80%;
         align-self: center;        

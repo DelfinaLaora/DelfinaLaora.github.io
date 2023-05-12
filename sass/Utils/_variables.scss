@@ -65,8 +65,6 @@ $anim-delay: $anim-dur / $num-plat;
     }
 
 @mixin heart-end {
-    background: -moz-linear-gradient(var(--color-secondary), var(--color-primary));; 
-    background: -webkit-linear-gradient(var(--color-secondary), var(--color-primary));; 
     background: linear-gradient(var(--color-secondary), var(--color-primary));
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -90,6 +88,20 @@ $breakpoints: (desktop: 1025px,
         @content;
     }
 }
+
+@-webkit-keyframes heart {
+    0%{ 
+      background-position: 0%;         
+    }       
+    50%{     
+      background-position :50%;
+      -webkit-text-stroke: 1px #9356DC;
+    }
+    100%{     
+      background-position :100%;
+      -webkit-text-stroke: 1px #9356DC;
+    }
+  }
 
 @keyframes heart {
     0%{ 
